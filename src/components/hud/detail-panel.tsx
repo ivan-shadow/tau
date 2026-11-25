@@ -262,7 +262,7 @@ export function IncidentPanel({ incident, related }: { incident: Incident; relat
               : "country level"}
           . Confidence {Math.round(incident.confidence * 100)}%. Spotted an error?{" "}
           <a
-            href={`https://github.com/yorkeccak/globalhackmap/issues/new?title=${encodeURIComponent(`Correction: ${incident.victim}`)}`}
+            href={`https://github.com/ivan-shadow/tau/issues/new?title=${encodeURIComponent(`Correction: ${incident.victim}`)}`}
             className="underline underline-offset-2 hover:text-ink-2"
             target="_blank"
             rel="noreferrer"

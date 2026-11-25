@@ -25,12 +25,12 @@ const martian = Martian_Mono({ subsets: ["latin"], axes: ["wdth"], variable: "--
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Global Hack Map: every hack, exploit and breach, live",
-    template: "%s | Global Hack Map",
+    default: "Tau: every hack, exploit and breach, live",
+    template: "%s | Tau",
   },
   description:
     "Every breach, ransomware attack, exploited vulnerability and malicious package on Earth, on one live map. Check if you are affected and fix it in one click. Open source, powered by Valyu.",
-  applicationName: "Global Hack Map",
+  applicationName: "Tau",
   keywords: [
     "cyber attack map",
     "live cyber threat map",
@@ -43,16 +43,16 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    siteName: "Global Hack Map",
-    title: "Global Hack Map: every hack, exploit and breach, live",
+    siteName: "Tau",
+    title: "Tau: every hack, exploit and breach, live",
     description: "Every breach, ransomware attack and exploited vulnerability on Earth, on one live map. Are you affected?",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Global Hack Map: every hack, exploit and breach, live",
+    title: "Tau: every hack, exploit and breach, live",
     description: "Every breach, ransomware attack and exploited vulnerability on Earth, on one live map. Are you affected?",
   },
-  alternates: { types: { "application/rss+xml": [{ url: "/feed.xml", title: "Global Hack Map: cyber incidents" }] } },
+  alternates: { types: { "application/rss+xml": [{ url: "/feed.xml", title: "Tau: cyber incidents" }] } },
 };
 
 export const viewport: Viewport = {

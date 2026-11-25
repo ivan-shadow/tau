@@ -3,8 +3,8 @@ import { execFileSync } from "node:child_process";
 
 // Uses the browser CLI without adding a project dependency. Run against an existing dev server:
 // node scripts/test-sidebar-interactions.mjs
-const session = `ghm-sidebar-tests-${process.pid}`;
-const base = process.env.GHM_TEST_URL ?? "http://localhost:3000";
+const session = `tau-sidebar-tests-${process.pid}`;
+const base = process.env.TAU_TEST_URL ?? "http://localhost:3000";
 
 function browser(...args) {
   const output = execFileSync("pnpm", ["dlx", "agent-browser", "--session", session, "--json", ...args], {

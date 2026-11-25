@@ -4,7 +4,7 @@ import { cacheLife } from "next/cache";
 
 import { countryPoint, nearestCity, resolveCity, type GeoPoint } from "@/lib/geo";
 
-const UA = "GlobalHackMap/1.0 (https://github.com/yorkeccak/globalhackmap; open-source cyber incident map)";
+const UA = "Tau/1.0 (https://github.com/ivan-shadow/tau; open-source cyber incident map)";
 
 const ORG_HINT =
   /(company|corporation|bank|university|college|school|hospital|health|government|agency|ministry|council|authority|organi[sz]ation|manufacturer|retailer|airline|railway company|insurer|insurance|operator|provider|brand|chain|firm|enterprise|conglomerate|business|subsidiary|public body|municipality|city|department|police|party|foundation|association|group|holding|maker|developer|publisher|platform|service|store|restaurant)/i;

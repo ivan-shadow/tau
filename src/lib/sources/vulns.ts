@@ -10,7 +10,7 @@ import type { MalwarePackage, Vuln } from "@/lib/types";
 import { withLastGood } from "@/lib/sources/last-good";
 import { valyuServer } from "@/lib/valyu/server";
 
-const UA = "GlobalHackMap/1.0 (+https://github.com/yorkeccak/globalhackmap)";
+const UA = "Tau/1.0 (+https://github.com/ivan-shadow/tau)";
 
 async function nvdFetch(url: string | URL): Promise<Response> {
   const key = process.env.NVD_API_KEY;

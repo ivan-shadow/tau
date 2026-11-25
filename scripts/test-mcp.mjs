@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
-const base = process.env.GHM_TEST_URL ?? "http://localhost:3000";
+const base = process.env.TAU_TEST_URL ?? "http://localhost:3000";
 const url = new URL("/api/mcp", base);
-const client = new Client({ name: "globalhackmap-protocol-test", version: "1.0.0" });
+const client = new Client({ name: "tau-protocol-test", version: "1.0.0" });
 
 try {
   await client.connect(new StreamableHTTPClientTransport(url));

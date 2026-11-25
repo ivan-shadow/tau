@@ -6,6 +6,6 @@ const EVENTS = new Set(["fix_click", "check_run", "share", "cinema"]);
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => ({}))) as { event?: string; target?: string; cve?: string };
   if (!body.event || !EVENTS.has(body.event)) return NextResponse.json({ ok: false }, { status: 400 });
-  console.info(JSON.stringify({ ghm_event: body.event, target: body.target?.slice(0, 40), cve: body.cve?.slice(0, 24), at: new Date().toISOString() }));
+  console.info(JSON.stringify({ tau_event: body.event, target: body.target?.slice(0, 40), cve: body.cve?.slice(0, 24), at: new Date().toISOString() }));
   return NextResponse.json({ ok: true });
 }

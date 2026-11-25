@@ -46,7 +46,7 @@ export const useSituation = create<SituationState>((set, get) => ({
   cinema: false,
   layers: { incidents: true, countries: true, outages: true, arcs: true },
   railOpen: true,
-  // Opening a dossier checks the free allowance: a few a day without an account, then Global Hack Map asks for a Valyu sign-in.
+  // Opening a dossier checks the free allowance: a few a day without an account, then Tau asks for a Valyu sign-in.
   select: (id) => {
     if (id && id !== get().selectedId && !useAccess.getState().allowOpen(`i:${id}`)) return;
     set({ selectedId: id, selectedCve: null });

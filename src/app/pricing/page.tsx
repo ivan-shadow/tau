@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Pricing: free and open source, AI on your own Valyu credits",
   description:
-    "Global Hack Map is free and open source. The map, incident pages, stack checks and fix prompts cost nothing. AI briefs and research run on your own Valyu credits, with free credits to start.",
+    "Tau is free and open source. The map, incident pages, stack checks and fix prompts cost nothing. AI briefs and research run on your own Valyu credits, with free credits to start.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -70,7 +70,7 @@ const PLANS: { name: string; price: string; per: string; credits: string; buys: 
 const FAQ: { q: string; a: string }[] = [
   {
     q: "Why does it use Valyu?",
-    a: "Global Hack Map is built on Valyu's search and research APIs: they read the world's news, filings and advisories to put each incident on the map. Signing in with Valyu lets the AI features run on your own account instead of a shared key, so there is no paywall in Global Hack Map itself.",
+    a: "Tau is built on Valyu's search and research APIs: they read the world's news, filings and advisories to put each incident on the map. Signing in with Valyu lets the AI features run on your own account instead of a shared key, so there is no paywall in Tau itself.",
   },
   {
     q: "Is my code or my list of vendors stored?",
@@ -78,7 +78,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Can I run my own copy?",
-    a: "Yes. Global Hack Map is open source. Clone the repository, add a Valyu API key and a Mapbox token, and deploy it anywhere that runs Next.js.",
+    a: "Yes. Tau is open source. Clone the repository, add a Valyu API key and a Mapbox token, and deploy it anywhere that runs Next.js.",
   },
   {
     q: "Is this one of those fake attack maps?",
@@ -158,7 +158,7 @@ export default function PricingPage() {
             <span className="text-ink-3">Your credits when you want more.</span>
           </h1>
           <p className="mt-6 max-w-[54ch] text-[16px] leading-relaxed text-ink-2 sm:text-[17px]">
-            Global Hack Map is open source. The map, the incident and CVE pages and the fix prompts cost nothing. A free Valyu account opens everything else,
+            Tau is open source. The map, the incident and CVE pages and the fix prompts cost nothing. A free Valyu account opens everything else,
             and when you want AI to do the reading for you, it runs on your own Valyu credits. New accounts start with free credits.
           </p>
           <div className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:items-center">
@@ -227,8 +227,8 @@ export default function PricingPage() {
         </section>
 
         <section className="mt-24 sm:mt-32">
-          <SectionHead eyebrow="Plans" title="Valyu plans, in Global Hack Map terms">
-            Your plan lives on your Valyu account and works across Global Hack Map, Valyu&apos;s APIs and any other app you sign in to with Valyu.
+          <SectionHead eyebrow="Plans" title="Valyu plans, in Tau terms">
+            Your plan lives on your Valyu account and works across Tau, Valyu&apos;s APIs and any other app you sign in to with Valyu.
           </SectionHead>
           <div className="glass-panel mt-8 rounded-[22px] p-1.5">
             <ol className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
@@ -250,7 +250,7 @@ export default function PricingPage() {
             <div className="flex flex-col gap-4 px-3.5 pb-2.5 pt-4 sm:flex-row sm:items-center sm:justify-between sm:pb-2">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[13px]">
                 <a
-                  href="https://www.valyu.ai/pricing?utm_source=globalhackmap&utm_medium=app&utm_campaign=pricing"
+                  href="https://www.valyu.ai/pricing?utm_source=tau&utm_medium=app&utm_campaign=pricing"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-1 text-ink-2 underline decoration-white/20 underline-offset-4 transition-colors hover:text-ink hover:decoration-ink"

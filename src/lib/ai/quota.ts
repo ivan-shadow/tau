@@ -3,7 +3,7 @@ import "server-only";
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
-const COOKIE = "ghm_q";
+const COOKIE = "tau_q";
 export const FREE_BRIEFS_PER_DAY = 5;
 
 function secret(): string | null {

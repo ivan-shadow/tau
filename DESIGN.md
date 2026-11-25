@@ -1,4 +1,4 @@
-# Global Hack Map design language
+# Tau design language
 
 Dark, precise, quiet. The globe and the ASCII art carry the drama; the interface is an instrument panel around them. Every surface earns its place; nothing is decorative chrome. The reference standard is the best of 21st.dev, Linear and Vercel: nested surfaces, one crisp hero number per view, small tracked labels, and data drawn as data.
 

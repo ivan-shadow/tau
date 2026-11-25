@@ -18,13 +18,13 @@ export default function ValyuCallback() {
     if (ran.current) return;
     ran.current = true;
     const params = new URLSearchParams(window.location.search);
-    const stored = JSON.parse(sessionStorage.getItem("ghm_oauth") ?? "null") as {
+    const stored = JSON.parse(sessionStorage.getItem("tau_oauth") ?? "null") as {
       verifier: string;
       state: string;
       returnTo: string;
       at: number;
     } | null;
-    sessionStorage.removeItem("ghm_oauth");
+    sessionStorage.removeItem("tau_oauth");
     const code = params.get("code");
     const complete = async () => {
       if (params.get("error") || !code || !stored || stored.state !== params.get("state") || Date.now() - stored.at > 600_000) {

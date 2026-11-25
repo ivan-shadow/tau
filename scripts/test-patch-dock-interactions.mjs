@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 
 // Run against an existing dev server: node scripts/test-patch-dock-interactions.mjs
-const session = `ghm-patch-dock-tests-${process.pid}`;
-const base = process.env.GHM_TEST_URL ?? "http://localhost:3000";
+const session = `tau-patch-dock-tests-${process.pid}`;
+const base = process.env.TAU_TEST_URL ?? "http://localhost:3000";
 
 function browser(...args) {
   const output = execFileSync("pnpm", ["dlx", "agent-browser", "--session", session, "--json", ...args], {

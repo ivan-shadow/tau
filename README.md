@@ -1,8 +1,6 @@
-# Global Hack Map
+# Tau
 
-**Try it live: [globalhackmap.vercel.app](https://globalhackmap.vercel.app)**
-
-[![Global Hack Map: live vulnerabilities, exploits and breaches on one globe](docs/screenshot.png)](https://globalhackmap.vercel.app)
+[![Tau: live vulnerabilities, exploits and breaches on one globe](docs/screenshot.png)](https://github.com/ivan-shadow/tau)
 
 Every hack, exploit and breach, live. Every publicly reported breach, ransomware claim, exploited vulnerability, malicious package and connectivity drop on one globe, each with its sources and an honest status. Check whether you are affected, then fix it in one click.
 
@@ -80,7 +78,7 @@ pnpm exec eslint src
 pnpm exec vitest run
 ```
 
-Browser regressions against `pnpm dev`: `node scripts/test-navigation-interactions.mjs`, `node scripts/test-responsive-interactions.mjs`, `node scripts/test-sidebar-interactions.mjs` and `node scripts/test-mcp.mjs`. To verify concurrent counters against an isolated local Redis process, install `redis-server`/`redis-cli` and run `GHM_REDIS_INTEGRATION=1 pnpm exec vitest run src/lib/http/rate-limit.integration.test.ts`.
+Browser regressions against `pnpm dev`: `node scripts/test-navigation-interactions.mjs`, `node scripts/test-responsive-interactions.mjs`, `node scripts/test-sidebar-interactions.mjs` and `node scripts/test-mcp.mjs`. To verify concurrent counters against an isolated local Redis process, install `redis-server`/`redis-cli` and run `TAU_REDIS_INTEGRATION=1 pnpm exec vitest run src/lib/http/rate-limit.integration.test.ts`.
 
 ## How it works
 
@@ -110,8 +108,12 @@ Browser regressions against `pnpm dev`: `node scripts/test-navigation-interactio
 | [NASA Blue Marble and Black Marble](https://earthdata.nasa.gov/) via GIBS                            | Globe relief and night lights                       | Public                                                                                    |
 | [Valyu](https://www.valyu.ai/)                                                                       | News search and extraction, answers, DeepResearch   | Valyu terms                                                                               |
 
-Spotted a mistake? [Open an issue](https://github.com/yorkeccak/globalhackmap/issues/new) with a source and it will be corrected.
+Spotted a mistake? [Open an issue](https://github.com/ivan-shadow/tau/issues/new) with a source and it will be corrected.
 
 ## Licence
 
 Code: MIT, see [LICENSE](LICENSE). Fonts in `src/assets/fonts` are under the SIL Open Font License.
+
+## Atribución
+
+Tau es un fork de [Global Hack Map](https://github.com/yorkeccak/globalhackmap) (Valyu), distribuido bajo la licencia MIT. Consulte `LICENSE` y `NOTICE`.

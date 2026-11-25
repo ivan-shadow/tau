@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 
-const session = `ghm-navigation-tests-${process.pid}`;
-const base = process.env.GHM_TEST_URL ?? "http://localhost:3000";
+const session = `tau-navigation-tests-${process.pid}`;
+const base = process.env.TAU_TEST_URL ?? "http://localhost:3000";
 const browser = (...args) => {
   const output = execFileSync("pnpm", ["dlx", "agent-browser", "--session", session, "--json", ...args], { encoding: "utf8", timeout: 60000 });
   const response = JSON.parse(output);
@@ -21,7 +21,7 @@ try {
   for (const mode of ["back", "home", "back"]) {
     browser("find", "role", "link", "click", "--name", "Agents", "--exact");
     wait("location.pathname === '/agents'");
-    if (mode === "home") browser("find", "role", "link", "click", "--name", "Global Hack Map home");
+    if (mode === "home") browser("find", "role", "link", "click", "--name", "Tau home");
     else browser("back");
     wait(ready);
     const state = evaluate(`(() => {

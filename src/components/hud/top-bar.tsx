@@ -57,7 +57,7 @@ function ActiveNavLinks() {
 export function TopBar({ ticker }: { ticker?: React.ReactNode }) {
   return (
     <header className="pointer-events-auto flex min-h-[68px] flex-wrap items-center gap-x-2 bg-space pb-3.5 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(0.875rem,env(safe-area-inset-top))] sm:gap-x-4 sm:pl-[max(1.25rem,env(safe-area-inset-left))] sm:pr-[max(1.25rem,env(safe-area-inset-right))]">
-      <Link href="/" className="flex items-center gap-2.5 rounded-full py-1.5 pl-1 pr-2 sm:pr-3" aria-label="Global Hack Map home">
+      <Link href="/" className="flex items-center gap-2.5 rounded-full py-1.5 pl-1 pr-2 sm:pr-3" aria-label="Tau home">
         <BrandMark className="size-[22px] text-ink" />
         {/* Stacked on phones so the nav keeps its row; one line from small tablets up. */}
         <span className="flex flex-col font-semicondensed font-bold leading-none tracking-[-0.01em] text-ink sm:flex-row sm:gap-[0.28em] sm:text-[19px]">
@@ -68,7 +68,7 @@ export function TopBar({ ticker }: { ticker?: React.ReactNode }) {
         </span>
       </Link>
       <a
-        href="https://www.valyu.ai/?utm_source=globalhackmap&utm_medium=app&utm_campaign=topbar"
+        href="https://www.valyu.ai/?utm_source=tau&utm_medium=app&utm_campaign=topbar"
         target="_blank"
         rel="noreferrer"
         className={cn("-ml-2 hidden items-center gap-1.5 text-[12px] text-ink-4 transition-colors hover:text-ink-2", ticker ? "xl:flex" : "md:flex")}

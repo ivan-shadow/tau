@@ -52,7 +52,7 @@ export async function takeLimits(limits: Limit[]): Promise<LimitResult> {
         limiter = new Ratelimit({
           redis: new Redis({ url, token, retry: false, signal: () => AbortSignal.timeout(2000) }),
           limiter: Ratelimit.fixedWindow(item.limit, `${item.windowMs} ms`),
-          prefix: `ghm:limit:v1:${item.limit}:${item.windowMs}`,
+          prefix: `tau:limit:v1:${item.limit}:${item.windowMs}`,
           analytics: false,
           ephemeralCache: false,
           timeout: 2000,

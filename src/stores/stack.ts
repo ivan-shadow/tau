@@ -29,7 +29,7 @@ export const useStack = create<StackState>()(
       toggle: (name) => (get().items.some((item) => same(item, name)) ? get().remove(name) : get().add(name)),
     }),
     // Rehydrated after mount (SituationRoom and UseCheck) so the server HTML and the first client render agree.
-    { name: "ghm_stack_v1", skipHydration: true },
+    { name: "tau_stack_v1", skipHydration: true },
   ),
 );
 

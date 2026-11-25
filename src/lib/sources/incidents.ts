@@ -9,7 +9,7 @@ import { withLastGood } from "@/lib/sources/last-good";
 import type { IncidentStatus, IncidentType, Incident, SourceRef } from "@/lib/types";
 import { ARTICLE_SCHEMA, SWEEP_MARKER, SWEEP_SCHEMA, sweepQuery, valyuServer } from "@/lib/valyu/server";
 
-const UA = "GlobalHackMap/1.0 (+https://github.com/yorkeccak/globalhackmap)";
+const UA = "Tau/1.0 (+https://github.com/ivan-shadow/tau)";
 
 /** A raw incident report from one source, before geocoding and dedupe. */
 export interface Candidate {
@@ -188,7 +188,7 @@ async function getSecDisclosuresFetched(): Promise<Fetched<Candidate[]>> {
     const day = (d: Date) => d.toISOString().slice(0, 10);
     const url = `https://efts.sec.gov/LATEST/search-index?q=${encodeURIComponent('"cybersecurity incident"')}&forms=8-K&dateRange=custom&startdt=${day(start)}&enddt=${day(end)}`;
     const res = await fetch(url, {
-      headers: { "User-Agent": "Valyu Global Hack Map contact@valyu.ai", Accept: "application/json" },
+      headers: { "User-Agent": "Valyu Tau contact@valyu.ai", Accept: "application/json" },
       signal: AbortSignal.timeout(15_000),
     });
     if (!res.ok) throw new Error(`SEC ${res.status}`);
@@ -588,7 +588,7 @@ export async function startSweep(fromDaysAgo = 3, toDaysAgo = 0): Promise<string
     mode: "fast",
     outputFormats: [SWEEP_SCHEMA],
     search: { startDate: day(start), endDate: day(end) },
-    metadata: { app: "globalhackmap", kind: "sweep" },
+    metadata: { app: "tau", kind: "sweep" },
   });
   return res.deepresearch_id ?? null;
 }

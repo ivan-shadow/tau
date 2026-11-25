@@ -7,5 +7,5 @@ export function oauthConfigured(): boolean {
   return Boolean(CLIENT_ID && REDIRECT_URI);
 }
 
-export const ACCESS_COOKIE = "ghm_at";
-export const REFRESH_COOKIE = "ghm_rt";
+export const ACCESS_COOKIE = "tau_at";
+export const REFRESH_COOKIE = "tau_rt";

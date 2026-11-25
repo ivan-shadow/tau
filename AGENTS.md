@@ -8,7 +8,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-# Working on Global Hack Map
+# Working on Tau
 
 - pnpm only. `pnpm dev` serves on port 3000; `pnpm exec tsc --noEmit` and `pnpm exec eslint src` must stay clean.
 - Read `DESIGN.md` before touching UI and `PRODUCT.md` for who it is for. Phosphor icons only; no em dashes in copy.

@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 
-const session = `ghm-responsive-tests-${process.pid}`;
-const base = process.env.GHM_TEST_URL ?? "http://localhost:3000";
+const session = `tau-responsive-tests-${process.pid}`;
+const base = process.env.TAU_TEST_URL ?? "http://localhost:3000";
 const browser = (...args) => {
   const response = JSON.parse(execFileSync("pnpm", ["dlx", "agent-browser", "--session", session, "--json", ...args], { encoding: "utf8", timeout: 60000 }));
   assert.equal(response.success, true);

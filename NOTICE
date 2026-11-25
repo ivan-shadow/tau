@@ -1,0 +1,10 @@
+Tau
+Copyright (c) 2026 ivan-shadow
+
+This project is a modified version (fork) of Global Hack Map:
+https://github.com/yorkeccak/globalhackmap
+Copyright (c) 2026 Valyu, licensed under the MIT License (see LICENSE).
+
+Modifications: project renamed from "Global Hack Map" to "Tau"
+(app name, metadata, package name, storage keys, environment
+variables, user agents and repository links).

@@ -120,7 +120,7 @@ export function CinemaMode({ incidents }: { incidents: Incident[] }) {
       <div className="absolute inset-x-0 bottom-0 h-[46vh] bg-gradient-to-t from-space via-space/70 to-transparent" />
       <div className="absolute left-6 top-6 flex items-center gap-3 sm:left-10">
         <BrandMark className="size-6 text-ink" />
-        <span className="font-semicondensed text-[20px] font-bold text-ink">Global Hack Map</span>
+        <span className="font-semicondensed text-[20px] font-bold text-ink">Tau</span>
         <span className="ml-1 flex items-center gap-2 rounded-full bg-confirmed/15 px-2.5 py-1 text-[12px] font-medium text-confirmed">
           <span className="live-dot size-1.5 rounded-full bg-confirmed" /> Live
         </span>

@@ -19,7 +19,7 @@ interface Result {
   sources?: { title?: string; url?: string }[];
 }
 
-const STORAGE = "ghm_research_";
+const STORAGE = "tau_research_";
 
 interface ResearchProps {
   kind: "incident" | "cve" | "stack";

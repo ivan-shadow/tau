@@ -7,7 +7,7 @@ import { useAuth } from "@/lib/auth/client";
 import { event } from "@/lib/events";
 import { ACCOUNTS } from "@/lib/mode";
 
-/** Dossiers a visitor can open each day before Global Hack Map asks them to sign in with Valyu. */
+/** Dossiers a visitor can open each day before Tau asks them to sign in with Valyu. */
 export const FREE_OPENS = 2;
 
 /** Why the sign-in prompt is showing, so it can say what signing in unlocks. */
@@ -69,7 +69,7 @@ export const useAccess = create<AccessState>()(
       closePrompt: () => set({ prompt: null }),
     }),
     // Only the allowance persists; the prompt itself never reopens on reload.
-    { name: "ghm_allowance_v1", partialize: ({ day, opened }) => ({ day, opened }), skipHydration: true },
+    { name: "tau_allowance_v1", partialize: ({ day, opened }) => ({ day, opened }), skipHydration: true },
   ),
 );
 

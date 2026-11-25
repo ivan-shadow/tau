@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Global Hack Map: every hack, exploit and breach, live",
+    name: "Tau: every hack, exploit and breach, live",
     short_name: "Hack Map",
     description:
       "Every breach, ransomware attack, exploited vulnerability and malicious package, on one live map with sources. Check if you are affected and fix it in one click.",

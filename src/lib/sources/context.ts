@@ -10,7 +10,7 @@ import { withLastGood } from "@/lib/sources/last-good";
 import type { DailyBrief, Outage } from "@/lib/types";
 import { BRIEF_MARKER, BRIEF_SCHEMA, briefQuery, valyuServer } from "@/lib/valyu/server";
 
-const UA = "GlobalHackMap/1.0 (+https://github.com/yorkeccak/globalhackmap)";
+const UA = "Tau/1.0 (+https://github.com/ivan-shadow/tau)";
 
 interface IodaEvent {
   location: string;
@@ -154,7 +154,7 @@ export async function startBrief(): Promise<string | null> {
     mode: "standard",
     outputFormats: [BRIEF_SCHEMA],
     search: { startDate: day(start), endDate: day(now) },
-    metadata: { app: "globalhackmap", kind: "brief" },
+    metadata: { app: "tau", kind: "brief" },
   });
   if (res.deepresearch_id) {
     await valyu.deepresearch.togglePublic(res.deepresearch_id, true).catch(() => undefined);

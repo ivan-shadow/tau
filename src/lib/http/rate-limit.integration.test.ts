@@ -8,8 +8,8 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 vi.mock("server-only", () => ({}));
 const exec = promisify(execFile);
 
-// Opt in with GHM_REDIS_INTEGRATION=1. Uses only an isolated, temporary local Redis process.
-describe.skipIf(process.env.GHM_REDIS_INTEGRATION !== "1")("official SDK against real Redis", () => {
+// Opt in with TAU_REDIS_INTEGRATION=1. Uses only an isolated, temporary local Redis process.
+describe.skipIf(process.env.TAU_REDIS_INTEGRATION !== "1")("official SDK against real Redis", () => {
   let process_: ChildProcess;
   let directory: string;
   let socket: string;
@@ -24,7 +24,7 @@ describe.skipIf(process.env.GHM_REDIS_INTEGRATION !== "1")("official SDK against
   afterEach(() => vi.restoreAllMocks());
 
   beforeAll(async () => {
-    directory = await mkdtemp(join(tmpdir(), "ghm-limit-"));
+    directory = await mkdtemp(join(tmpdir(), "tau-limit-"));
     socket = join(directory, "redis.sock");
     process_ = spawn("redis-server", ["--port", "0", "--unixsocket", socket, "--save", "", "--appendonly", "no"], { stdio: ["ignore", "pipe", "pipe"] });
     await new Promise<void>((resolve, reject) => {

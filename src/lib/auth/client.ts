@@ -63,7 +63,7 @@ export async function startSignIn(returnTo = window.location.pathname + window.l
   const verifier = randomString();
   const state = randomString();
   const challenge = base64Url(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier))));
-  sessionStorage.setItem("ghm_oauth", JSON.stringify({ verifier, state, returnTo, at: Date.now() }));
+  sessionStorage.setItem("tau_oauth", JSON.stringify({ verifier, state, returnTo, at: Date.now() }));
   const url = new URL("/auth/v1/oauth/authorize", AUTH_URL);
   url.search = new URLSearchParams({
     client_id: CLIENT_ID,

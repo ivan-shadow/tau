@@ -8,7 +8,7 @@ import type { Ecosystem, Severity, StackPackage } from "@/lib/stack/types";
 import { compareVersions } from "@/lib/stack/version";
 
 const OSV = "https://api.osv.dev/v1";
-const UA = "GlobalHackMap/1.0 (+https://github.com/yorkeccak/globalhackmap)";
+const UA = "Tau/1.0 (+https://github.com/ivan-shadow/tau)";
 const BATCH = 1000;
 
 interface OsvEvent {
